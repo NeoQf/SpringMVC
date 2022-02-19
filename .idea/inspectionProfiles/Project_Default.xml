@@ -30,7 +30,15 @@
       <option name="IGNORE_JAVADOC_PERIOD" value="true" />
       <option name="IGNORE_DUPLICATED_THROWS" value="false" />
       <option name="IGNORE_POINT_TO_ITSELF" value="false" />
-      <option name="myAdditionalJavadocTags" value="date" />
+      <option name="myAdditionalJavadocTags" value="date,Controller：创建处理器对象，对象放在springmvc容器中。,RequestMapping：请求映射，作用是把一个请求地址和一个方法绑定在一起。" />
+    </inspection_tool>
+    <inspection_tool class="MavenPackageUpdate" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="excludeList">
+        <list>
+          <option value="junit:junit" />
+          <option value="org.springframework:spring-webmvc" />
+        </list>
+      </option>
     </inspection_tool>
   </profile>
 </component>
