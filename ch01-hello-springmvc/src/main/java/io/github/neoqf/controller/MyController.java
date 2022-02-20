@@ -36,7 +36,7 @@ public class MyController {
      *      Model: 数据，请求处理完成后，要显示给用户的数据
      *      View: 视图， 比如jsp等等。
      */
-    @RequestMapping(value = "/some.do")
+    @RequestMapping({"/some.do","/first.do"})
     public ModelAndView doSome() {  //doGet--service请求处理
         //处理了some.do请求，相当于service调用处理完成了。
         ModelAndView mv = new ModelAndView();
@@ -46,8 +46,26 @@ public class MyController {
         mv.addObject("fun", "执行的是dosome方法");
         //指定视图, 指定视图的完整路径
         //框架对视图执行的forward操作， request.getRequestDispather("/show.jsp).forward(...)
-        mv.setViewName("/show.jsp");
+        // mv.setViewName("WEB-INF/view/show.jsp");
+        // mv.setViewName("WEB-INF/view/other.jsp");
+
+        //当配置了视图解析器后，可以使用逻辑名称（文件名），指定视图
+        //框架会使用视图解析器的前缀 + 逻辑名称 + 后缀 组成完成路径， 这里就是字符连接操作
+        ///WEB-INF/view/ + show + .jsp
+        mv.setViewName("show");
+
+        //mv.setView( new RedirectView("/a.jsp"));
+
         // 返回mv
+        return mv;
+    }
+
+    @RequestMapping(value = {"/other.do","/second.do"})
+    public ModelAndView doOther(){
+        ModelAndView mv  = new ModelAndView();
+        mv.addObject("msg","====欢迎使用springmvc做web开发====");
+        mv.addObject("fun","执行的是doOther方法");
+        mv.setViewName("other");
         return mv;
     }
 }
