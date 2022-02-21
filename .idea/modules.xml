@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PowernodeSpringMVC.iml" filepath="$PROJECT_DIR$/PowernodeSpringMVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch01-hello-springmvc/ch01-hello-springmvc.iml" filepath="$PROJECT_DIR$/ch01-hello-springmvc/ch01-hello-springmvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch02-requestmapping/ch02-requestmapping.iml" filepath="$PROJECT_DIR$/ch02-requestmapping/ch02-requestmapping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch03-recevieparam/ch03-recevieparam.iml" filepath="$PROJECT_DIR$/ch03-recevieparam/ch03-recevieparam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch04-return/ch04-return.iml" filepath="$PROJECT_DIR$/ch04-return/ch04-return.iml" />
     </modules>
   </component>
 </project>
