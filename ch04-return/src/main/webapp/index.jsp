@@ -9,33 +9,54 @@
 <html>
 <head>
     <title>Title</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("button").click(function (){
+                // alert("button click");
+                $.ajax({
+                    url:"returnVoid-ajax.do",
+                    data:{
+                        name:"zhangsan",
+                        age:20
+                    },
+                    type:"post",
+                    dataType:"json",
+                    success:function (resp) {   // pw.println(json);中的json传递给resp
+                        //resp从服务器端返回的是json格式的字符串 {"name":"zhangsan","age":20}
+                        //jquery会把字符串转为json对象， 赋值给resp形参。
+
+                        // [{"name":"李四同学","age":20},{"name":"张三","age":28}]
+                        alert(resp.name + "    "+resp.age);
+
+                        /*$.each(resp,function(i,n){
+                            alert(n.name+"   "+n.age)
+                        })*/
+                        // alert(resp);
+                    }
+                })
+            })
+        })
+    </script>
 </head>
 <body>
-    <p> 提交参数给Controller </p>
-
-    <form action="receiveproperty.do" method="post">
+    <p> 处理器方法返回String表示视图名称 </p>
+    <form action="returnString-view.do" method="post">
         姓名：<input type="text" name="name"> <br/>
         年龄：<input type="text" name="age"> <br/>
         <input type="submit" value="提交参数">
     </form>
 
-
     <br/>
-    <p>请求参数名和处理器方法的形参名不一样</p>
-    <form action="receiveparam.do" method="post">
-        姓名：<input type="text" name="rname"> <br/>
-        年龄：<input type="text" name="rage"> <br/>
-        <input type="submit" value="提交参数">
-    </form>
-
-    <br/>
-    <p>使用java对象接收请求参数</p>
-    <form action="receiveobject.do" method="post">
+    <p> 处理器方法返回String表示视图完整路径 </p>
+    <form action="returnString-view2.do" method="post">
         姓名：<input type="text" name="name"> <br/>
         年龄：<input type="text" name="age"> <br/>
         <input type="submit" value="提交参数">
     </form>
-
+    <br/>
+    <br/>
+    <button id="btn"> 发起Ajax请求 </button>
 
 </body>
 </html>

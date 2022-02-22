@@ -2,7 +2,8 @@ ch04-return: 处理器方法的返回值表示请求的处理结果
 1.ModelAndView: 有数据和视图，对视图执行forward。
 2.String:表示视图，可以逻辑名称，也可以是完整视图路径
 3.void: 不能表示数据，也不能表示视图。
-  在处理ajax的时候，可以使用void返回值。 通过HttpServletResponse输出数据。响应ajax请求。
+  在处理ajax的时候，可以使用void返回值。
+  通过HttpServletResponse输出数据，响应ajax请求。
   ajax请求服务器端返回的就是数据， 和视图无关。
 4.Object： 例如String ， Integer ， Map,List, Student等等都是对象，
   对象有属性， 属性就是数据。 所以返回Object表示数据， 和视图无关。
@@ -17,7 +18,7 @@ ch04-return: 处理器方法的返回值表示请求的处理结果
        PrintWriter pw  = response.getWriter();
        pw.println(json);
 
-  springmvc处理器方法返回Object， 可以转为json输出到浏览器，响应ajax的内部原理
+  springmvc处理器方法返回Object， 可以转为json输出到浏览器、响应ajax的内部原理
   1. <mvc:annotation-driven> 注解驱动。
      注解驱动实现的功能是 完成java对象到json，xml， text，二进制等数据格式的转换。
      <mvc:annotation-driven>在加入到springmvc配置文件后， 会自动创建HttpMessageConverter接口
