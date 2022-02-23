@@ -15,7 +15,9 @@
             $("button").click(function (){
                 // alert("button click");
                 $.ajax({
-                    url:"returnVoid-ajax.do",
+                    // url:"returnVoid-ajax.do",
+                    //url:"returnStudentJsonArray.do",
+                    url:"returnStudentJson.do",
                     data:{
                         name:"zhangsan",
                         age:20
