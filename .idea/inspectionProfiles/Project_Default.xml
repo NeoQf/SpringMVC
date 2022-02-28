@@ -37,6 +37,15 @@
         <list>
           <option value="junit:junit" />
           <option value="org.springframework:spring-webmvc" />
+          <option value="org.springframework:spring-jdbc" />
+          <option value="com.fasterxml.jackson.core:jackson-core" />
+          <option value="com.fasterxml.jackson.core:jackson-databind" />
+          <option value="org.mybatis:mybatis-spring" />
+          <option value="org.mybatis:mybatis" />
+          <option value="mysql:mysql-connector-java" />
+          <option value="com.alibaba:druid" />
+          <option value="javax.servlet:javax.servlet-api" />
+          <option value="org.springframework:spring-tx" />
         </list>
       </option>
     </inspection_tool>
