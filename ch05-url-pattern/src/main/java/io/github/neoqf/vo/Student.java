@@ -1,4 +1,4 @@
-package com.bjpowernode.vo;
+package io.github.neoqf.vo;
 
 //保存请求参数值的一个普通类
 public class Student {

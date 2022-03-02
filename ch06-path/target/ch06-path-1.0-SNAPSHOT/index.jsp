@@ -1,8 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String basePath = request.getScheme() + "://" +
+            request.getServerName() + ":" + request.getServerPort() +
+            request.getContextPath() + "/";
+%>
 <html>
 <head>
     <title>Title</title>
-    <base href="http://localhost:8080/ch06_path/" />
+    <base href="<%=basePath%>" />
 </head>
 <body>
      <p>第一个springmvc项目</p>
